@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.14)  11 DEC 2025 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.14)  12 DEC 2025 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,10 +437,34 @@ File: plots/cv_heatmaps/MNIST_heatmap.png Graphic file (type png)
 Package pdftex.def Info: plots/cv_heatmaps/MNIST_heatmap.png  used on input lin
 e 115.
 (pdftex.def)             Requested size: 318.12366pt x 189.32472pt.
+
+Overfull \hbox (9.05475pt too wide) in paragraph at lines 197--206
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (9.05475pt too wide) in paragraph at lines 214--223
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (9.05475pt too wide) in paragraph at lines 230--239
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <plots/overfitting.png, id=149, 502.9992pt x 338.2236pt>
 File: plots/overfitting.png Graphic file (type png)
 <use plots/overfitting.png>
-Package pdftex.def Info: plots/overfitting.png  used on input line 237.
+Package pdftex.def Info: plots/overfitting.png  used on input line 247.
 (pdftex.def)             Requested size: 337.0077pt x 226.60863pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -452,47 +476,46 @@ map.png>]
 <plots/accuracy_dataset.png, id=173, 502.9992pt x 324.4923pt>
 File: plots/accuracy_dataset.png Graphic file (type png)
 <use plots/accuracy_dataset.png>
-Package pdftex.def Info: plots/accuracy_dataset.png  used on input line 249.
+Package pdftex.def Info: plots/accuracy_dataset.png  used on input line 259.
 (pdftex.def)             Requested size: 337.0077pt x 217.4087pt.
 <plots/accuracy_dataset_model.png, id=174, 502.9992pt x 338.2236pt>
 File: plots/accuracy_dataset_model.png Graphic file (type png)
 <use plots/accuracy_dataset_model.png>
 Package pdftex.def Info: plots/accuracy_dataset_model.png  used on input line 2
-56.
+66.
 (pdftex.def)             Requested size: 337.0077pt x 226.60863pt.
  [5] [6 <./plots/overfitting.png> <./plots/accuracy_dataset.png>] [7]
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 295--301
+ [][] 
+ []
+
+
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 308--314
+ [][] 
+ []
+
+
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 321--327
+ [][] 
+ []
+
 (./final_report.bbl
+Underfull \vbox (badness 1418) has occurred while \output is active []
+
+ [8 <./plots/accuracy_dataset_model.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 []\OT1/ptm/m/n/10 Semeion Hand-writ-ten Digit.  UCI Ma-chine Learn-ing Repos-i-
 tory, 1998.  DOI:
  []
 
-)
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 293--299
- [][] 
- []
-
-
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 306--312
- [][] 
- []
-
-
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 319--325
- [][] 
- []
-
-[8] [9 <./plots/accuracy_dataset_model.png>] (./final_report.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+) [9] (./final_report.aux)
 Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: D8635AC9503F02F2A257BB1899E65022;4124.
  ) 
 Here is how much of TeX's memory you used:
  10829 strings out of 478268
  162459 string characters out of 5846347
- 476667 words of memory out of 5000000
+ 477645 words of memory out of 5000000
  28791 multiletter control sequences out of 15000+600000
  499661 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -503,7 +526,7 @@ xlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on final_report.pdf (9 pages, 260539 bytes).
+Output written on final_report.pdf (9 pages, 260406 bytes).
 PDF statistics:
  249 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
