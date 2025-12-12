@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.14)  11 DEC 2025 19:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.14)  11 DEC 2025 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -301,8 +301,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 \Gin@req@height=\dimen154
 \Gin@req@width=\dimen155
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-9.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
+1.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -315,24 +315,24 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 (./final_report.aux)
 \openout1 = `final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -356,7 +356,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 31.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -370,44 +370,44 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count289
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
  (./final_report.out) (./final_report.out)
 \@outlinefile=\write3
 \openout3 = `final_report.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-3.
+5.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 4
-8.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 5
+0.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
- [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+ [1
 
-]
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-5.
+7.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -416,31 +416,31 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 File: plots/cv_heatmaps/Semeion_heatmap.png Graphic file (type png)
 <use plots/cv_heatmaps/Semeion_heatmap.png>
 Package pdftex.def Info: plots/cv_heatmaps/Semeion_heatmap.png  used on input l
-ine 92.
+ine 94.
 (pdftex.def)             Requested size: 310.86055pt x 189.32472pt.
  [2]
 <plots/cv_heatmaps/Optical_heatmap.png, id=143, 469.755pt x 282.5757pt>
 File: plots/cv_heatmaps/Optical_heatmap.png Graphic file (type png)
 <use plots/cv_heatmaps/Optical_heatmap.png>
 Package pdftex.def Info: plots/cv_heatmaps/Optical_heatmap.png  used on input l
-ine 99.
+ine 101.
 (pdftex.def)             Requested size: 314.73422pt x 189.32472pt.
 <plots/cv_heatmaps/Pen_heatmap.png, id=144, 469.755pt x 282.5757pt>
 File: plots/cv_heatmaps/Pen_heatmap.png Graphic file (type png)
 <use plots/cv_heatmaps/Pen_heatmap.png>
 Package pdftex.def Info: plots/cv_heatmaps/Pen_heatmap.png  used on input line 
-106.
+108.
 (pdftex.def)             Requested size: 314.73422pt x 189.32472pt.
 <plots/cv_heatmaps/MNIST_heatmap.png, id=145, 474.8139pt x 282.5757pt>
 File: plots/cv_heatmaps/MNIST_heatmap.png Graphic file (type png)
 <use plots/cv_heatmaps/MNIST_heatmap.png>
 Package pdftex.def Info: plots/cv_heatmaps/MNIST_heatmap.png  used on input lin
-e 113.
+e 115.
 (pdftex.def)             Requested size: 318.12366pt x 189.32472pt.
 <plots/overfitting.png, id=149, 502.9992pt x 338.2236pt>
 File: plots/overfitting.png Graphic file (type png)
 <use plots/overfitting.png>
-Package pdftex.def Info: plots/overfitting.png  used on input line 235.
+Package pdftex.def Info: plots/overfitting.png  used on input line 237.
 (pdftex.def)             Requested size: 337.0077pt x 226.60863pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -452,13 +452,13 @@ map.png>]
 <plots/accuracy_dataset.png, id=173, 502.9992pt x 324.4923pt>
 File: plots/accuracy_dataset.png Graphic file (type png)
 <use plots/accuracy_dataset.png>
-Package pdftex.def Info: plots/accuracy_dataset.png  used on input line 247.
+Package pdftex.def Info: plots/accuracy_dataset.png  used on input line 249.
 (pdftex.def)             Requested size: 337.0077pt x 217.4087pt.
 <plots/accuracy_dataset_model.png, id=174, 502.9992pt x 338.2236pt>
 File: plots/accuracy_dataset_model.png Graphic file (type png)
 <use plots/accuracy_dataset_model.png>
 Package pdftex.def Info: plots/accuracy_dataset_model.png  used on input line 2
-54.
+56.
 (pdftex.def)             Requested size: 337.0077pt x 226.60863pt.
  [5] [6 <./plots/overfitting.png> <./plots/accuracy_dataset.png>] [7]
 (./final_report.bbl
@@ -468,17 +468,17 @@ tory, 1998.  DOI:
  []
 
 )
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 291--297
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 293--299
  [][] 
  []
 
 
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 304--310
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 306--312
  [][] 
  []
 
 
-Overfull \hbox (24.23022pt too wide) in paragraph at lines 317--323
+Overfull \hbox (24.23022pt too wide) in paragraph at lines 319--325
  [][] 
  []
 
@@ -492,18 +492,18 @@ Package rerunfilecheck Info: File `final_report.out' has not changed.
 Here is how much of TeX's memory you used:
  10829 strings out of 478268
  162459 string characters out of 5846347
- 477703 words of memory out of 5000000
+ 476667 words of memory out of 5000000
  28791 multiletter control sequences out of 15000+600000
  499661 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,75p,983b,367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,9n,75p,983b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on final_report.pdf (9 pages, 261354 bytes).
+Output written on final_report.pdf (9 pages, 260539 bytes).
 PDF statistics:
  249 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
