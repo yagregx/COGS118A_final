@@ -7,6 +7,7 @@
 
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{graphicx}
 
 
 \title{An Empirical Comparison of Supervised Learning in Handwritten Digits Classification}
@@ -31,17 +32,19 @@ COGS 118A Final Report \\
 \maketitle
 
 \begin{abstract}
-In this paper, we used some of the supervised machine learning algorithms reported in ``An Empirical Comparison of Supervised Learning Algorithms". We experimented with different classifiers on several datasets, all designed for the handwritten digits classification problem. 
+We\footnote{First person plural is used in this report considering conventions of academic writing. I would like to clarify here that this is an individual project.} conduct an empirical comparison of three supervised learning algorithms (logistic regression, decision trees, and linear support vector machines) reported in \cite{caruana2008empirical} on four handwritten digit datasets (Semeion, Optical Recognition, Pen-Based, and MNIST). Using multiple training/test splits and cross-validation for hyperparameter tuning, we evaluate model performance in terms of accuracy, generalization, and overfitting. Our results show that SVM generally achieves the highest accuracy, while decision trees exhibit greater overfitting, particularly on smaller or more variable datasets. Overall, model performance is robust across datasets, highlighting the influence of feature representation and dataset characteristics on classifier effectiveness.
 \end{abstract}
 
 \section{Introduction}
-... 
+Handwritten digit recognition is a canonical problem in machine learning, providing a controlled setting for evaluating supervised classification algorithms. In this study, we systematically compare the performance of logistic regression, decision trees, and linear SVMs across four publicly available datasets: Semeion, Optical Recognition, Pen-Based, and MNIST. These datasets vary in size, input representation, and preprocessing, providing a range of challenges in terms of resolution, writer variability, and feature structure.
+
+We focus on a binary classification task, distinguishing the digit ``7'' from all other digits, in order to provide a consistent evaluation framework and simplify comparison across datasets. By using multiple training/test splits and cross-validation for hyperparameter tuning, we investigate not only model accuracy but also the effects of dataset characteristics, hyperparameters, and overfitting on classifier performance. This study aims to identify patterns of generalization across diverse handwritten digit datasets and highlight practical considerations in model selection.
 
 \section{Methodology}
 \subsection{Learning algorithms and training procedure}
-We compare the performance within and across the bagging classifiers using the following procedure. We use three classifiers, experimented on three different splits of training and testing set size: 20/80, 50/50, 80/20, with respect to four different datasets. In each experiment, we fine tune these classifiers using 3-fold cross validation on the training set to find the best hyper-parameters.Then we use the whole training set to train the classifier and report the metrics on the test set. 
+We compare logistic regression, decision trees, and linear SVMs across four datasets and three train/test splits: 20/80, 50/50, and 80/20. For each dataset and split, classifiers are trained and evaluated using 3-fold cross-validation to select optimal hyperparameters. After tuning, each model is retrained on the full training set and evaluated on the corresponding test set. Each experiment is repeated three times to account for variability in random splits, and mean performance metrics are reported. This procedure allows us to compare model performance, hyperparameter effects, and generalization patterns systematically across datasets.
 
-\subsubsection{Logistics regression}
+\subsubsection{Logistic regression}
 We search different regularization term C from the range \{0.001,0.01,0.1,1,10\}.
 
 \subsubsection{Decision tree}
@@ -58,15 +61,59 @@ Using multiple datasets allows us to test how well models generalize across vari
 We converted the multi-class digit labels into a binary classification problem. Specifically, the labels are converted from 0-9 to ``7" and ``not 7". 
 This allows us to examine model performance on a simplified task. This binary conversion also facilitates comparison of model behavior across datasets, highlighting differences in learning patterns and sensitivity to hyperparameters. 
 
+\subsubsection{Semeion Handwritten Digit}
+The Semeion dataset contains 1,593 handwritten digit images collected from approximately 80 writers \citep{semeion_handwritten_digit_178}. Each digit was scanned and normalized to a 16×16 grayscale image, then binarized using a fixed threshold to convert each pixel into a 0/1 value. For the rest of the report, this dataset is referred to as ``Semeion". 
+
 \subsubsection{Optical Recognition of Handwritten Digits}
-...
+This is a dataset with size 1797 \citep{Alpaydin1998OpticalDigits}, samples being handwritten digits. The raw 32×32 bitmaps were divided into 4×4 non-overlapping blocks, and the number of active (“on”) pixels in each block was computed. This produces an 8×8 representation where each pixel takes an integer value from 0 to 16, providing a compact and distortion-tolerant encoding. 
 For the rest of the report, this dataset is referred to as ``Optical". 
 
-\subsubsection{MNIST}
+\subsubsection{Pen-Based Recognition of Handwritten Digits}
+This is a dataset of size 10992\citep{pen-based_recognition_of_handwritten_digits_81}. The data were collected using a WACOM tablet, capturing (x,y) coordinates of the pen. Each digit trajectory is normalized for translation and scale, and resampled to a fixed number of points to create feature vectors of equal length. 
+For the rest of the report, this dataset is referred to as ``Pen". 
+
+
+\subsubsection{MNIST Database of Handwritten Digits}
+This is one of the most commonly used database for assessing supervised learning models \citep{6296535}. 
+The dataset contains centered 28×28 grayscale images of handwritten digits. There are 70000 samples in this dataset. 
+For the rest of the report, this dataset is referred to as ``MNIST". 
+
+These four datasets vary in size, input type, and preprocessing, providing a diverse set of challenges for handwritten digit recognition. 
 
 \section{Experimental results}
 
 \subsection{Hyperparameters}
+
+Tables \ref{table-decisiontree}, \ref{table-logistic}, \ref{table-svm} show the cross-validation mean accuracy per model / dataset / split. 
+We also included the heatmaps (Figures 1, 2, 3, 4) for the CV mean performances for each dataset. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/cv_heatmaps/Semeion_heatmap.png}
+\end{center}
+\caption{CV mean performance heatmap for Semeion}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/cv_heatmaps/Optical_heatmap.png}
+\end{center}
+\caption{CV mean performance heatmap for Optical}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/cv_heatmaps/Pen_heatmap.png}
+\end{center}
+\caption{CV mean performance heatmap for Pen}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/cv_heatmaps/MNIST_heatmap.png}
+\end{center}
+\caption{CV mean performance heatmap for MNIST}
+\end{figure}
 
 \begin{table}[t]
 \caption{CV mean performance for decision tree}
@@ -134,60 +181,107 @@ Optical      & 0.8/0.2 & 0.01 & 0.9842 ± 0.0036 \\
 \end{center}
 \end{table}
 
+
+
 \subsection{Test accuracy}
-... Due to missing prediction data during the runs, F1 scores could not be computed for some models. 
+Tables \ref{table-split-0.2_t}, \ref{table-split-0.5_t}, \ref{table-split-0.8_t} show the test accuracy of each classifier on three different datasets. Due to missing prediction data during the runs, F1 scores could not be computed for some models. 
+Bold font means that it is the best in the same column. 
 
 \begin{table}[t]
 \caption{Test accuracy for split 0.2/0.8}
-\label{table-split-0.2}
+\label{table-split-0.2_t}
 \begin{center}
 \begin{tabular}{lllll}
 \multicolumn{1}{c}{\bf Model} & \multicolumn{1}{c}{\bf MNIST} & \multicolumn{1}{c}{\bf Optical} & \multicolumn{1}{c}{\bf Pen} & \multicolumn{1}{c}{\bf Semeion} \\ \hline \\
 DecisionTree        & 0.964 & 0.958 & 0.976 & 0.911 \\
-LogisticRegression  & 0.982 & 0.991 & 0.979 & 0.968 \\
-SVM                 & 0.983 & 0.988 & 0.981 & 0.970 \\
+LogisticRegression  & 0.982 & \textbf{0.991} & 0.979 & 0.968 \\
+SVM                 & \textbf{0.983} & 0.988 & \textbf{0.981} & \textbf{0.970} \\
 \end{tabular}
 \end{center}
 \end{table}
 
 \begin{table}[t]
 \caption{Test accuracy for split 0.5/0.5}
-\label{table-split-0.5}
+\label{table-split-0.5_t}
 \begin{center}
 \begin{tabular}{lllll}
 \multicolumn{1}{c}{\bf Model} & \multicolumn{1}{c}{\bf MNIST} & \multicolumn{1}{c}{\bf Optical} & \multicolumn{1}{c}{\bf Pen} & \multicolumn{1}{c}{\bf Semeion} \\ \hline \\
 DecisionTree        & 0.963 & 0.969 & 0.981 & 0.921 \\
-LogisticRegression  & 0.984 & 0.992 & 0.982 & 0.980 \\
-SVM                 & 0.984 & 0.993 & 0.983 & 0.979 \\
+LogisticRegression  & \textbf{0.984} & 0.992 & 0.982 & \textbf{0.980} \\
+SVM                 & \textbf{0.984} & \textbf{0.993} & \textbf{0.983} & 0.979 \\
 \end{tabular}
 \end{center}
 \end{table}
 
 \begin{table}[t]
 \caption{Test accuracy for split 0.8/0.2}
-\label{table-split-0.8}
+\label{table-split-0.8_t}
 \begin{center}
 \begin{tabular}{lllll}
 \multicolumn{1}{c}{\bf Model} & \multicolumn{1}{c}{\bf MNIST} & \multicolumn{1}{c}{\bf Optical} & \multicolumn{1}{c}{\bf Pen} & \multicolumn{1}{c}{\bf Semeion} \\ \hline \\
 DecisionTree        & 0.963 & 0.977 & 0.979 & 0.947 \\
-LogisticRegression  & 0.984 & 0.991 & 0.982 & 0.983 \\
-SVM                 & 0.984 & 0.993 & 0.983 & 0.984 \\
+LogisticRegression  & \textbf{0.984} & 0.991 & 0.982 & 0.983 \\
+SVM                 & \textbf{0.984} & \textbf{0.993} & \textbf{0.983} & \textbf{0.984} \\
 \end{tabular}
 \end{center}
 \end{table}
 
+
 \subsection{Overfitting analysis}
+We calculated the overfitting by dataset and model. Specifically, the training and validation accuracy across all splits and trials for each dataset and model is calculated, and the extent of overfitting is calculated by Train - Validation Accuracy. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/overfitting.png}
+\end{center}
+\caption{Overfitting analysis across dataset and model}
+\end{figure}
+
 
 \subsection{Dataset difficulty}
 
-\section{Discussion and conclusion}
+The average test accuracy is also calculated in order to compare model performances across datasets (See Figures 6 and 7). 
 
-\bibliography{iclr2024_conference}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/accuracy_dataset.png}
+\end{center}
+\caption{Average test accuracy by dataset}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.67]{plots/accuracy_dataset_model.png}
+\end{center}
+\caption{Average test accuracy by dataset and model}
+\end{figure}
+
+\section{Discussion}
+
+\subsection{Hyperparameter effects}
+Based on the CV mean performance heatmaps, SVM generally achieves the highest CV mean across datasets, except for the Pen dataset, where the decision tree performs best. This may reflect the nature of the feature representation in Pen, which benefits from the tree’s partitioning approach. Additionally, we observe slightly higher CV mean scores for the 0.8/0.2 split compared to other splits, likely because a larger training set allows the models to learn more effectively, resulting in improved cross-validation performance. 
+
+\subsection{Test accuracy across models}
+We do not provide a ranking here since it is not statistically meaningful, and all test accuracy exceeded 0.9. Overall, these three classifiers perform similarly on accuracy metrics. Linear SVM seemed to achieve the highest accuracy, particularly in MNIST and Pen, whereas decision tree performed relatively worse on all datasets. 
+
+\subsection{Overfitting}
+Overall, decision tree shows a pronounced gap between training and validation accuracy, especially in the Optical, Pen, and Semeion datasets. This indicates its strong overfitting, especially on small datasets. Logistic regression and SVM demonstrate smaller gaps, suggesting better generalization. 
+
+\subsection{Dataset difficulty}
+While the average test accuracies were similar across datasets, subtle differences may reflect variations in dataset characteristics. For instance, Semeion exhibits higher writer variability and less standardized preprocessing, whereas MNIST and Optical contain more uniform, centered images. These factors could make some datasets slightly more challenging, even if overall accuracy appears comparable.
+
+\section{Conclusion}
+Taken together, our experiments demonstrate that SVM generally achieves the highest accuracy across datasets, with logistic regression performing similarly, while decision trees show greater overfitting, particularly on smaller or more variable datasets such as Semeion and Pen. Differences in dataset characteristics (such as input representation, preprocessing, and writer variability) modulate model performance, though overall accuracy remains high for all classifiers.
+
+Cross-validation heatmaps reveal that hyperparameter selection can influence performance, with larger training sets (e.g., 0.8/0.2 split) producing slightly higher CV mean accuracy due to improved learning. While average test accuracy was similar across datasets, subtle distinctions in overfitting and variance highlight the importance of dataset structure in practical model evaluation. Overall, this study provides a comprehensive comparison of supervised classifiers for handwritten digit recognition, illustrating how algorithm choice and dataset properties jointly determine performance.
+
+\bibliography{final_report}
 \bibliographystyle{iclr2024_conference}
 
 \appendix
 \section{Appendix}
 \subsection{Training and Validation Accuracy}
+Tables 7, 8, 9 show the training and validation accuracy for each experiment. 
 
 \begin{table}[t]
 \caption{Training and validation accuracy for split 0.2/0.8}
@@ -231,5 +325,8 @@ SVM & 0.987 & 0.984 & 0.996 & 0.994 & 0.984 & 0.983 & 0.991 & 0.975 \\
 
 \subsection{Source Code}
 The code for our experiments is available at \url{https://github.com/yagregx/COGS118A_final}. 
+
+\subsection{Bonus Points}
+In addition to the minimum three datasets required, I included the MNIST dataset, providing a significantly larger and more complex benchmark for handwritten digit classification. This allows for a more comprehensive comparison across datasets of varying size and difficulty. 
 
 \end{document}
